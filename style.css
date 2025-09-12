@@ -93,7 +93,8 @@ body {
     margin-top: 25px;
     width: 338px;
     height: 520px;
-    background-color: #e8e8e8;
+    color: #fff;
+    background-color: #000;
     border: 1px solid #a1a1a1;
     border-radius: 25px;
     text-align: center;
@@ -140,7 +141,7 @@ label {
     position: fixed;
     top: 5px;
     right: 15px;
-    color: rgba(0,0,0,0.5);
+    color: #ffffff80;
 }
 
 nav ul {
@@ -161,7 +162,7 @@ nav ul {
 
 nav ul li {
     padding: 20px;
-    border-bottom: 1px solid #a9a9a9;
+    border-bottom: 1px solid #fff;
     text-align: right;
 }
 
@@ -177,7 +178,7 @@ main {
     background: url(img/gado.jpg);
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,7 +197,7 @@ main h2 {
 /* Sobre */
 #sobre {
     padding: 50px 0px;
-    background: url(img/pedrafel.webp);
+    background: url(img/vaca1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -206,7 +207,8 @@ main h2 {
 }
 
 #textoSobre {
-    color: #b50000;
+    color: #fff;
+    flex-direction: column;
     justify-content: center;
     background-position: center;
     padding: 0px 10px;
@@ -440,7 +442,7 @@ footer {
     }
 
     nav ul li a {
-        color: #343538;
+        color: #fff;
     }
 
     nav ul li a:hover{
