@@ -27,6 +27,13 @@ body {
     margin: 0 auto;
 }
 
+.Letra {
+    color: yellow;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .Flex {
     display: flex;
     justify-content: space-between;
@@ -91,8 +98,8 @@ body {
 /* Cartões */
 .Card {
     margin-top: 25px;
-    width: 338px;
-    height: 520px;
+    width: 450x;
+    height: 250px;
     color: #fff;
     background-color: #000;
     border: 1px solid #a1a1a1;
@@ -248,7 +255,7 @@ main h2 {
 /* wireframe */
 #wireframe {
     padding: 50px 0px;
-    background: url(img/seguranca.jpg);
+    background: url(img/vaca1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -272,11 +279,14 @@ main h2 {
 
 #qrcode {
     display: none;
+    width: 225px;
+    height: 225px;
 }
 
 /* Conteúdo */
 #conteudo {
     padding: 50px 0 px;
+    background-color: #000;
 }
 
 #conteudo h2 {
@@ -291,7 +301,7 @@ main h2 {
 
 #todos a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: 700;
     font-size: 1.25em;
 
@@ -300,7 +310,7 @@ main h2 {
 /* rodapé */
 address {
     padding: 35px 10px 50px 10px;
-    background: url(img/background2.png);
+    background: url(img/pedradefelbovina.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -481,7 +491,8 @@ footer {
 
     #qrcode {
         display: inline;
-        
+        width: 225px;
+        height: 225px;
     }
 
     /* Rodapé */
