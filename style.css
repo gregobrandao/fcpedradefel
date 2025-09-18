@@ -511,3 +511,97 @@ footer {
         flex-direction: row-reverse;
     }
 }
+
+/* ====== Processo de Compra – suave + borda interna (título 3 linhas) ====== */
+.sec-processo{ padding: clamp(28px,5vw,72px) 12px; }
+.sec-processo h2{ text-align:center; margin:0; font-weight:800; line-height:1.2; }
+.sec-processo h2 span{ display:block; margin-top:8px; }
+.sec-processo .decor{ text-align:center; margin:12px 0 22px; letter-spacing:.35em; color:#FFC20E; user-select:none; }
+
+.grade-passos{
+  margin:0; padding:0; list-style:none;
+  display:grid; gap:clamp(12px,2.5vw,22px);
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+/* Card com sombra suave + borda interna */
+.cartao{
+  background:#fff;
+  border:2px solid rgba(255,194,14,.6);      /* borda externa discreta */
+  border-radius:20px;
+  padding:clamp(16px,2.6vw,28px);
+  /* sombra suave + leve “glow” amarelo + borda interna */
+  box-shadow:
+    0 6px 24px rgba(0,0,0,.06),
+    0 1px 0 rgba(0,0,0,.02),
+    inset 0 0 0 1px rgba(255,194,14,.28);
+  display:grid; grid-template-rows:auto auto 1fr; min-height:240px;
+  text-align:center;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.cartao:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,180,0,.9);
+  box-shadow:
+    0 10px 32px rgba(0,0,0,.08),
+    0 2px 0 rgba(0,0,0,.03),
+    inset 0 0 0 1px rgba(255,180,0,.35);
+}
+
+/* Número */
+.numero{
+  font-weight:800; font-size:clamp(40px,6.5vw,72px); line-height:1;
+  color:#FFC20E; margin-bottom:6px; width:100%;
+}
+
+/* Título (h4) – nivelado para 3 linhas no desktop/tablet */
+.cartao-titulo{
+  font-size:clamp(17px,2.1vw,24px); line-height:1.25; margin:0 0 10px;
+  min-height:3.75em;                /* 1.25 * 3 linhas */
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  overflow-wrap:anywhere; hyphens:manual;
+}
+
+/* Texto */
+.cartao-texto{
+  margin:0; color:#5f5f5f; font-size:clamp(14px,1.5vw,16px);
+}
+
+/* Acessibilidade: menos movimento para quem prefere */
+@media (prefers-reduced-motion: reduce){
+  .cartao, .cartao:hover{ transition:none; transform:none; }
+}
+
+/* Mobile */
+@media (max-width:480px){
+  .cartao{ padding:14px; min-height:unset; }
+  .numero{ font-size:38px; margin-bottom:4px; }
+  .cartao-titulo{
+    min-height:unset; -webkit-line-clamp:unset; display:block;
+    font-size:17px; margin-bottom:8px;
+  }
+  .cartao-texto{ font-size:14px; }
+}
+
+/* Espaço entre a imagem e o vídeo dentro do container responsivo */
+.Flex3{
+  gap: clamp(16px, 3vw, 40px);    /* espaçamento vertical (mobile) e horizontal (desktop) */
+  align-items: flex-start;        /* evita que o topo do vídeo “grude” visualmente */
+}
+
+/* (opcional) garante que mídia ocupe bem a largura do card/coluna */
+.Flex3 img,
+.Flex3 iframe{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* Fallback caso você queira compatibilidade extra sem 'gap' */
+@media (min-width: 992px){
+  .Flex3 > * + *{ margin-left: 32px; }  /* apenas desktop */
+}
+@media (max-width: 991.98px){
+  .Flex3 > * + *{ margin-top: 16px; }   /* apenas mobile/tablet */
+}
