@@ -605,3 +605,49 @@ footer {
 @media (max-width: 991.98px){
   .Flex3 > * + *{ margin-top: 16px; }   /* apenas mobile/tablet */
 }
+
+/* ====== Procedimento de Envio (ajustado) ====== */
+:root{
+  --proc-ico: #4F46E5; /* cor dos ícones (troque se quiser) */
+}
+
+.sec-proc{ background:#f3f3f3; padding:clamp(28px,5vw,72px) 12px; }
+.sec-proc h2{ text-align:center; margin:0; font-weight:800; line-height:1.2; }
+/* sem cor amarela no <span> do título */
+.sec-proc .proc-decor{ text-align:center; margin:12px 0 22px; letter-spacing:.35em; color:#FFC20E; user-select:none; }
+
+.grade-proc{
+  display:grid; gap:clamp(14px,2.4vw,24px);
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card-proc{
+  background:#fff; border-radius:20px;
+  padding:clamp(18px,2.8vw,30px);
+  box-shadow:0 6px 24px rgba(0,0,0,.06), inset 0 0 0 1px rgba(0,0,0,.03);
+}
+
+/* Ícones maiores e controlados por CSS */
+.proc-icone{ display:flex; justify-content:center; align-items:center; margin:6px 0 10px; }
+.proc-icone svg{
+  width: clamp(52px, 5.5vw, 72px);   /* ↑ tamanho */
+  height: auto;
+  fill: var(--proc-ico);             /* nova cor */
+}
+
+.proc-titulo{ font-size:clamp(20px,2.2vw,32px); line-height:1.15; margin:8px 0 14px; }
+
+/* Lista com check */
+.proc-lista{ list-style:none; padding:0; margin:0; display:grid; gap:10px; color:#444; font-size:clamp(14px,1.6vw,18px); }
+.proc-lista li{ position:relative; padding-left:28px; }
+.proc-lista li::before{
+  content:"✔"; position:absolute; left:0; top:0.05em;
+  font-size:1.05em; line-height:1; color:#111;
+}
+
+@media (max-width:480px){
+  .card-proc{ padding:16px; }
+  .proc-titulo{ font-size:22px; }
+  .proc-icone svg{ width:64px; } /* mantém presença no mobile */
+  .proc-lista{ gap:8px; }
+}
